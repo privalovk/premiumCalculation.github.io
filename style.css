@@ -40,4 +40,8 @@ input.calcButton
 input.field
 {
 	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 5px
+	border:solid silver 2px;
+	border-radius:10px;
 }
