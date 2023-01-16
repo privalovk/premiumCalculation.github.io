@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Tipe" content="text/html; charset=UTF-8"/>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<title>Premium Calculation</title>
+		<script href="js.js"></script>
+		<script>
+			function calculate()
+			{
+				var ratio1 = (document.getElementById("kk").value)/(document.getElementById("kkPlan").value);
+				var ratio2 = document.getElementById("dvd").value/document.getElementById("dvdPlan").value;
+				var ratioWork = (document.getElementById("working").value);
+				var ratioStable = (document.getElementById("trend").value);
+				var kk = (document.getElementById("kk").value);
+				var kkPlan = (document.getElementById("kkPlan").value);
+				var dvd = (document.getElementById("dvd").value);
+				var dvdPlan = (document.getElementById("dvdPlan").value);
+				var dvd500 = (document.getElementById("dvd500").value);
+				var bg1 = (document.getElementById("bg1").value);
+				var bg2 = (document.getElementById("bg2").value);
+				var trend = (document.getElementById("trend").value);
+				var working = (document.getElementById("working").value);
+				var fine = (document.getElementById("fine").value);
+				
+				var r1, r2, rt, rw;
+				
+				if(ratio1 >= 1.1)
+					r1 = 1.2;
+				else if (ratio1 >= 1)
+					r1 = 1;
+				else if (ratio1 >= 0.95)
+					r1 = 0.9;
+				else if (ratio1 >= 0.8)
+					r1 = 0.7;
+				else
+					r1 = 0.5;
+				
+				if(ratio2 >= 1)
+					r2 = 1;
+				else if (ratio2 >= 0.95)
+					r2 = 0.9;
+				else if (ratio2 >= 0.8)
+					r2 = 0.7;
+				else
+					r2 = 0.5;
+				
+				if(trend >= 80)
+					rt = 1.1;
+				else
+					rt = 0.9;
+				
+				if(working >= 80)
+					rw = 1;
+				else
+					rw = 0.8;
+				var sum = (((kk - 22) * 500 * rw) + (dvd500 * 250) + (bg1 * 2500) + (bg2 * 100) - fine) * r1 * r2 * rt;
+				alert(sum);
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Premium Calculation</h1>
+		</header>
+		
+		<div>
+			<article>
+				<center><h3>Премия за весь месяц</h3></center>
+				<form>
+					<center>
+					<input type = "text" class="field" id="kkPlan"  size="40" value="" placeholder="введите план кк">
+					<input type = "text" class="field" id="kk"  size="40" value="" placeholder="введите выданные кк">
+					<input type = "text" class="field" id="dvdPlan"  size="40" value="" placeholder="введите план двд">
+					<input type = "text" class="field" id="dvd"  size="40" value="" placeholder="введите сделанные двд">
+					<input type = "text" class="field" id="dvd500"  size="40" value="" placeholder="введите сделанные двд от 500р">
+					<input type = "text" class="field" id="bg1"  size="40" value="" placeholder="введите количество первых попаданий в портфель">
+					<input type = "text" class="field" id="bg2"  size="40" value="" placeholder="введите количество вторых попаданий в портфель">
+					<input type = "text" class="field" id="trend"  size="40" value="" placeholder="введите процент дней выполнения тренда">
+					<input type = "text" class="field" id="working"  size="40" value="" placeholder="введите процент работающих">
+					<input type = "text" class="field" id="fine"  size="40" value="" placeholder="введите сумму штрафов">
+					</center>
+					<center><input class="calcButton"id="calculationFull" type="button" onclick="calculate()" class="button"  value="Calculate!"></center>
+				</form>
+			</article>
+			<article>
+				<center><h3>Премия за часть месяца</h3></center>
+			</article>
+		</div>
+	</body>
+</html>
