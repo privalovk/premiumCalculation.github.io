@@ -46,7 +46,7 @@
 		if(working >= 80)
 			rw = 1;
 		else
-			rw = 0;
+			rw = 0.8;
 		var sum = (((kk - 22) * 500 * rw) + (dvd500 * 250) + (bg1 * 2500) + (bg2 * 100) - fine) * r1 * r2 * rt * 0.87;
 		alert(sum);
 	}
