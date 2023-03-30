@@ -1,8 +1,8 @@
 
 	function calculate()
 	{
-		var ratio1 = getElementById("kk").value/getElementById("kkPlan").value;
-		var ratio2 = getElementById("dvd").value/getElementById("dvdPlan").value;
+		var ratio1 = floor(getElementById("kk").value/getElementById("kkPlan").value);
+		var ratio2 = floor(getElementById("dvd").value/getElementById("dvdPlan").value);
 		var ratioWork = getElementById("working").value;
 		var ratioStable = getElementById("trend").value;
 		var kk = floor(getElementById("kk").value);
