@@ -1,19 +1,20 @@
 
 	function calculate()
 	{
-		var ratio1 = floor(getElementById("kk").value/getElementById("kkPlan").value);
-		var ratio2 = floor(getElementById("dvd").value/getElementById("dvdPlan").value);
+		var kkPlan =  getElementById("kkPlan").value
+		var kk = floor(getElementById("kk").value);
+		var dvdPlan = floor(getElementById("dvdPlan").value);
+		var ratio1 = floor(getElementById("kk").value/kkPlan);
+		var ratio2 = floor(getElementById("dvd").value/dvdPlN);
 		var ratioWork = getElementById("working").value;
 		var ratioStable = getElementById("trend").value;
-		var kk = floor(getElementById("kk").value);
-		var kkPlan = floor(getElementById("kkPlan").value);
+		
 		var dvd = floor(getElementById("dvd").value);
-		var dvdPlan = floor(getElementById("dvdPlan").value);
 		var dvd500 = floor(getElementById("dvd500").value);
 		var bg1 = floor(getElementById("bg1").value);
 		var bg2 = floor(getElementById("bg2").value);
 		var trend = floor(getElementById("trend").value);
-		var working = floor(getElementById("working").value);
+		var working = floor(gttElementById("working").value);
 		var fine = floor(getElementById("fine").value);
 		
 		var r1, r2, rt, rw;
@@ -47,6 +48,6 @@
 			rw = 1;
 		else
 			rw = 0.8;
-		var sum = (((kk - 22) * 500 * rw) + (dvd500 * 250) + (bg1 * 2500) + (bg2 * 100) - fine) * r1 * r2 * rt * 0.87;
+		var sum = (((kk - 22) * 500 * rw) + (dvd500 * 250) + (bg1 * 2500) + (bg2 * 00) - fine) * r1 * r2 * rt * 0.87;
 		alert(sum);
 	}
