@@ -46,15 +46,21 @@ input.field
 	border-radius:10px;
 }
 
-center.c1
+#res
 {
-	width: 100%;
-	high:25em;
-	float:left;
-	border-right: 20px;
+	marging: 2px;
+	padding: 2px;
+	border:solid silver 2px;
+	border-radius:10px;
 }
-
-#res, res1, res2
+#res1
+{
+	marging: 2px;
+	padding: 2px;
+	border:solid silver 2px;
+	border-radius:10px;
+}
+#res2
 {
 	marging: 2px;
 	padding: 2px;
