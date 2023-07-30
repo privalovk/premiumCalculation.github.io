@@ -45,3 +45,10 @@ input.field
 	border:solid silver 2px;
 	border-radius:10px;
 }
+
+center.c1
+{
+	width: 100%;
+	high:25em;
+	float:left;
+}
