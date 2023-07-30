@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Tipe" content="text/html; charset=UTF-8"/>
 		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<title>Premium Calculation</title>
 		<script href="js.js"></script>
 		<script>
@@ -91,19 +92,23 @@
 			<h1>Premium Calculation</h1>
 		</header>
 		
-		<div>
+		<div class="container">
+			<div class="raw">
 			<article>
-				<center><h3>Премия за весь месяц</h3></center>
+				<center class=""><h3>Премия за весь месяц</h3></center>
+				<div class="col-6">
 				<form>
 					<center class="c1">
-					<input type = "range" min="0" max="300" class="field" id="kkPlan1"  size="40" value="" placeholder="введите план кк(1) ">
-					<input type = "range" min="0" max="300" class="field" id="kk1"  size="40" value="" placeholder="введите выданные кк(1)">
-					<input type = "range" min="0" max="300" class="field" id="dvd1"  size="40" value="" placeholder="введите сделанные двд(1)">
-					<input type = "range" min="0" max="300" class="field" id="dvd5001"  size="40" value="" placeholder="введите сделанные двд от 500р(1)">
-					<input type = "range" min="0" max="300" class="field" id="bg11"  size="40" value="" placeholder="введите количество первых попаданий в портфель(1)">
-					<input type = "range" min="0" max="300" class="field" id="bg12"  size="40" value="" placeholder="введите количество вторых попаданий в портфель(1)">
+					<input type = "text" min="0" max="300" class="field" id="kkPlan1"  size="40" value="" placeholder="введите план кк(1) ">
+					<input type = "text" min="0" max="300" class="field" id="kk1"  size="40" value="" placeholder="введите выданные кк(1)">
+					<input type = "text" min="0" max="300" class="field" id="dvd1"  size="40" value="" placeholder="введите сделанные двд(1)">
+					<input type = "text" min="0" max="300" class="field" id="dvd5001"  size="40" value="" placeholder="введите сделанные двд от 500р(1)">
+					<input type = "text" min="0" max="300" class="field" id="bg11"  size="40" value="" placeholder="введите количество первых попаданий в портфель(1)">
+					<input type = "text" min="0" max="300" class="field" id="bg12"  size="40" value="" placeholder="введите количество вторых попаданий в портфель(1)">
 					</center>
 				</form>
+				</div>
+				<div class="col-6">
 				<form>	
 					<center class="c1">
 						<input type = "text" class="field" id="kkPlan2"  size="40" value="" placeholder="введите план кк(2)">
@@ -114,11 +119,15 @@
 						<input type = "text" class="field" id="bg22"  size="40" value="" placeholder="введите количество вторых попаданий в портфель(2)">
 					</center>
 				</form>
+				</div>
+			</div>
+				<div class="raw">
 					<center>
 						<input type = "text" class="field" id="trend"  size="40" value="" placeholder="введите процент дней выполнения тренда">
 						<input type = "text" class="field" id="working"  size="40" value="" placeholder="введите процент работающих">
 						<input type = "text" class="field" id="fine"  size="40" value="" placeholder="введите сумму штрафов">
 					</center>
+				</div>
 				<center><input class="calcButton"id="calculationFull" type="button" onclick="calculate()" class="button"  value="Calculate!"></center>
 			</form>
 		</article>
