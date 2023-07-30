@@ -83,6 +83,9 @@
 				var sum1 = (((kk1 - 11) * 500 * rw) + (dvd5001) * 250 + (bg11 * 2500) + (bg12 * 500)) * r11 * r12;
 				var sum2 = (((kk2 - 11) * 500 * rw) + (dvd5002) * 250 + (bg21 * 2500) + (bg22 * 500)) * r21 * r22;
 				var sum = sum1 + sum2 - fine; 
+				document.getElementById("res1").value = sum1;
+				document.getElementById("res2").value = sum2;
+				document.getElementById("res").value = sum;
 				alert(sum);
 			}
 			
@@ -129,7 +132,17 @@
 					</center>
 				</div>
 				<center><input class="calcButton"id="calculationFull" type="button" onclick="calculate()" class="button"  value="Calculate!"></center>
-				<center><input id="first_res" type="button" class="button" onclick></center>
+				<div class="row">
+				  <div class="col">
+				    <input type="text" class="form-control" id="res1" placeholder="Первая половина" aria-label="First">
+				  </div>
+				  <div class="col">
+				    <input type="text" class="form-control" id="res2" placeholder="Вторая половина" aria-label="Second">
+				  </div>
+				<div class="col">
+				    <input type="text" class="form-control" id="res" placeholder="суммарная премия" aria-label="Full">
+				  </div>
+				</div>
 			</form>
 	</article>
 </body>
