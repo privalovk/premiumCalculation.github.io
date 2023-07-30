@@ -53,3 +53,11 @@ center.c1
 	float:left;
 	border-right: 20px;
 }
+
+.ansButton
+{
+	marging: 2px;
+	padding: 2px;
+	border:solid silver 2px;
+	border-radius:10px;
+}
